@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'app-utils'
+
+    publishedGroupId = 'com.puuga.lib'
+    libraryName = 'puugalibrary'
+    artifact = 'app-utils'
+
+    libraryDescription = 'Utils to make app on Android'
+
+    siteUrl = 'https://github.com/puuga/app-utils'
+    gitUrl = 'https://github.com/puuga/app-utils.git'
+
+    libraryVersion = '0.1.1'
+
+    developerId = 'puuga'
+    developerName = 'Siwawes Wongcharoen'
+    developerEmail = 'siwaoh@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
@@ -8,7 +32,7 @@ android {
         minSdkVersion 17
         targetSdkVersion 24
         versionCode 1
-        versionName "1.0"
+        versionName "0.1.1"
     }
     buildTypes {
         release {
@@ -23,3 +47,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.0'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
